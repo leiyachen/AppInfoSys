@@ -41,7 +41,7 @@
 	<bean id="myConversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
 		<property name="converters">
 			<list>
-				<bean class="cn.smbms.tools.StringToDateConverter">
+				<bean class="cn.app.tools.StringToDateConverter">
 					<constructor-arg type="java.lang.String" value="yyyy-MM-dd"/>
 				</bean>
 			</list>
@@ -88,8 +88,12 @@
 	<!-- 拦截器 -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/sys/**"/>
-			<bean class="cn.app.interceptor.SysInterceptor"></bean>
+			<mvc:mapping path="/back/**"/>
+			<bean class="cn.app.interceptor.BackInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/dev/**"/>
+			<bean class="cn.app.interceptor.DevInterceptor"></bean>
 		</mvc:interceptor>
 	</mvc:interceptors>
 </beans>

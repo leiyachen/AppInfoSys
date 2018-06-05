@@ -40,7 +40,28 @@ public class AppInfo {
 	
 	private Integer versionId;//最新的版本id
 	private String versionNo;//最新的版本号
-		
+	private Integer currentPageNo=0;
+	private Integer pageSize=5;
+	
+	private String changeCode;
+	public String getChangeCode() {
+		return changeCode;
+	}
+	public void setChangeCode(String changeCode) {
+		this.changeCode = changeCode;
+	}
+	public Integer getCurrentPageNo() {
+		return currentPageNo;
+	}
+	public void setCurrentPageNo(Integer currentPageNo) {
+		this.currentPageNo = currentPageNo;
+	}
+	public Integer getPageSize() {
+		return pageSize;
+	}
+	public void setPageSize(Integer pageSize) {
+		this.pageSize = pageSize;
+	}
 	public String getVersionNo() {
 		return versionNo;
 	}
